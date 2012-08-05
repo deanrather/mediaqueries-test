@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Mock</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>localStorage.clear()</script>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less">
+    <script src="less-1.3.0.min.js"></script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  </head>
+  <body>
+
+    <div id="game">
+
+      <div id="too-small" class="hidden">
+        <p>The screen is too small!</p>
+        <p>If you're using a phone, try holding it up-right.</p>
+      </div>
+
+      <div id="loading" class="game-state"><p>Loading...</p></div>
+
+    </div> <!-- /game -->
+
+  <script>
+    function displayWindowSize() {
+      document.getElementById("loading").innerHTML = window.innerWidth + "x" + window.innerHeight;
+    };
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+  </script>
+  </body>
+</html>

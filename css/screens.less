@@ -1,0 +1,27 @@
+
+// 320x480 iphone 3 (-20 for the top bar -- this assumes run as an 'app') retina display doubles this
+@media screen and (min-width:320px) and (min-height:460px) { @import "screens/320x460.less"; }
+@media screen and (min-width:320px) and (min-height:460px) and (-webkit-min-device-pixel-ratio: 2) { @import "screens/320x460-retina.less"; }
+
+// 360x567 samsung galaxy s2 (this is having removed the top bar already) retina display doubles this
+@media screen and (min-width:360px) and (min-height:567px) { @import "screens/360x567.less"; }
+@media screen and (min-width:360px) and (min-height:567px) and (-webkit-min-device-pixel-ratio: 2) { @import "screens/360x567-retina.less"; }
+
+// 1024x768 ipad (-20 for the top bar -- this assumes run as an 'app') ipad 3 retina display doubles this
+@media screen and (min-width:1004px) and (min-height:768px) { @import "screens/1004x768.less"; }
+@media screen and (min-width:1004px) and (min-height:768px) and (-webkit-min-device-pixel-ratio: 2) { @import "screens/1004x768-retina.less"; }
+
+// 1366x768 standard monitors
+@media screen and (min-width:1366px) and (min-height:768px) { @import "screens/1366x768.less"; }
+
+// 1920x1080 hd monitors
+@media screen and (min-width:1920px) and (min-height:1080px) { @import "screens/1920x1080.less"; }
+
+// Portrait
+@media screen and (orientation:portrait) { @import "screens/portrait.less"; }
+
+// Landscape
+@media screen and (orientation:landscape) { @import "screens/landscape.less"; }
+
+// too small
+@media screen and (max-width:320px) { @import "screens/invalid.less"; }
